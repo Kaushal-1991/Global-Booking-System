@@ -14,47 +14,42 @@ import com.booking.dto.AddSessionRequest;
 import com.booking.dto.CreateOfferingRequest;
 import com.booking.dto.OfferingResponse;
 import com.booking.service.TeacherService;
-
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/api/teacher")
 @RequiredArgsConstructor
+@Tag(name = "Teacher APIs", description = "Teacher Management APIs")
 public class TeacherController {
 
     private final TeacherService teacherService;
 
+    @Operation(summary = "Create Offering")
     @PostMapping("/offerings")
     public Long createOffering(
-            @Valid
-            @RequestBody
-            CreateOfferingRequest request) {
+            @RequestBody CreateOfferingRequest request) {
 
-        return teacherService
-                .createOffering(request);
+        return teacherService.createOffering(request);
     }
 
-    @PostMapping(
-            "/offerings/{offeringId}/sessions")
+    @Operation(summary = "Add Sessions")
+    @PostMapping("/offerings/{offeringId}/sessions")
     public String addSessions(
             @PathVariable Long offeringId,
             @RequestBody AddSessionRequest request) {
 
-        teacherService.addSessions(
-                offeringId,
-                request);
+        teacherService.addSessions(offeringId, request);
 
         return "Sessions Added Successfully";
     }
 
+    @Operation(summary = "Get Teacher Offerings")
     @GetMapping("/{teacherId}/offerings")
-    public List<OfferingResponse>
-    getTeacherOfferings(
+    public List<OfferingResponse> getTeacherOfferings(
             @PathVariable Long teacherId) {
 
-        return teacherService
-                .getTeacherOfferings(
-                        teacherId);
+        return teacherService.getTeacherOfferings(teacherId);
     }
 }
