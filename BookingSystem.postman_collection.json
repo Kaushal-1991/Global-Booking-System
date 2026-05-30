@@ -1,0 +1,161 @@
+{
+  "info": {
+    "_postman_id": "2b5d512c-02bd-4eb6-a85e-027dd9fbe4f1",
+    "name": "BookingSystem",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "16471869"
+  },
+  "item": [
+    {
+      "name": "Create Offering",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJZV29QZnVUbmV5VHVZTm9PVGh4cXB0cWFGVW9GeFpqZmE4Y184dHpaUGU4In0.eyJleHAiOjE3ODAwMjM5NjMsImlhdCI6MTc4MDAyMzkwMywianRpIjoib25ydHJvOmEwYzRmM2EwLTUyYzEtOGJlYy05M2IwLWMxN2IzMjQ3YjJlYSIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9yZWFsbXMvbWFzdGVyIiwiYXVkIjpbIm1hc3Rlci1yZWFsbSIsImFjY291bnQiXSwic3ViIjoiYzVkNGI4OGMtZTczYS00N2JhLWI5MjktZGQyMzUxMGRjNDIwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic2Fsb24tYm9va2luZy1jbGllbnQiLCJzaWQiOiJTaWlSZVJ5OWJncm5jNmNKdldzLXdnRFgiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJjcmVhdGUtcmVhbG0iLCJkZWZhdWx0LXJvbGVzLW1hc3RlciIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1hc3Rlci1yZWFsbSI6eyJyb2xlcyI6WyJ2aWV3LWlkZW50aXR5LXByb3ZpZGVycyIsInZpZXctcmVhbG0iLCJtYW5hZ2UtaWRlbnRpdHktcHJvdmlkZXJzIiwiaW1wZXJzb25hdGlvbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IkthdXNoYWwgUmFqIFNpbmdoIiwicHJlZmVycmVkX3VzZXJuYW1lIjoia2F1c2hhbDEyMyIsImdpdmVuX25hbWUiOiJLYXVzaGFsIFJhaiIsImZhbWlseV9uYW1lIjoiU2luZ2giLCJlbWFpbCI6InJhamthdXNoYWwwMkBnbWFpbC5jb20ifQ.CppPuBiBI00rpWCNnRTUPm_wpG-o-328KvoZTGqACQ4iFfXwkIDrDUi8U_07VHVtbHgBjZgka4QlxUy8g-IgqNVwd9z94EnvgW-J1rkSavRr3bEvA9KO1ZbrWTcMlTQDgzOqpCXedeBXclaQre4NTWTql4Dz9tXAbvdoDWfacIeZb1eKxJuzNn82TjzbWxyOBMIk0fTbUOZaifQbQqb3XyFoDcjxeHQj1v1AjAP-yax3X0EQRdS7ogijWZYJGk-DpHdyOdQuMDnPjBuweebbxZ8R9ogIc7x_Qd87jRLZUw5EtnQvg412niuUFbYTrsqnWrptPyEoThn2m-_SzRJN-A",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"teacherId\":1,\r\n  \"courseId\":1,\r\n  \"batchName\":\"Saturday Batch\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/teacher/offerings",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "teacher",
+            "offerings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Sessions",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"timezone\":\"America/New_York\",\r\n  \"sessions\":[\r\n    {\r\n      \"start\":\"2026-06-07T18:00\",\r\n      \"end\":\"2026-06-07T19:00\"\r\n    },\r\n    {\r\n      \"start\":\"2026-06-14T18:00\",\r\n      \"end\":\"2026-06-14T19:00\"\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/teacher/offerings/1/sessions",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "teacher",
+            "offerings",
+            "1",
+            "sessions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "View Offerings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/parent/offerings?parentId=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "parent",
+            "offerings"
+          ],
+          "query": [
+            {
+              "key": "parentId",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Book Offering",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"parentId\":1,\r\n   \"offeringId\":1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/parent/book",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "parent",
+            "book"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Booking",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/parent/1/bookings",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "parent",
+            "1",
+            "bookings"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
